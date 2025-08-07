@@ -166,8 +166,8 @@ O site foi desenvolvido com abordagem mobile-first e é totalmente responsivo:
 ### Contato
 
 Para dúvidas ou sugestões sobre o projeto:
-- Email: contato@espacosorelle.com
-- Telefone: (11) 9999-9999
+- Email: giseleprado1800@gmail.com
+- Telefone: (16) 16996042319 ou (16) 999138656
 
 ---
 
