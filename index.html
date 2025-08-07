@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Sorelle Oficial - Produtos de Beleza Premium</title>
+    <meta name="description" content="Descubra os melhores produtos de beleza, maquiagem, cuidados com a pele e cabelo. Qualidade premium com entrega rápida.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-gem"></i> Espaço Sorelle</h1>
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Início</a></li>
+                        <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                        <li><a href="#categorias" class="nav-link">Categorias</a></li>
+                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar produtos..." id="searchInput">
+                        <button type="button" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="header-icons">
+                        <button class="icon-btn wishlist-btn" title="Lista de Desejos">
+                            <i class="fas fa-heart"></i>
+                            <span class="badge" id="wishlistCount">0</span>
+                        </button>
+                        
+                        <button class="icon-btn cart-btn" title="Carrinho" id="cartBtn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="badge" id="cartCount">0</span>
+                        </button>
+                    </div>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h2 class="hero-title">Desperte Sua Beleza Natural</h2>
+                    <p class="hero-subtitle">Descubra nossa coleção exclusiva de produtos de beleza premium, cuidadosamente selecionados para realçar sua beleza única.</p>
+                    <div class="hero-buttons">
+                        <a href="#produtos" class="btn btn-primary">Explorar Produtos</a>
+                        <a href="#categorias" class="btn btn-outline">Ver Categorias</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+    </section>
+
+    <!-- Categorias em Destaque -->
+    <section class="featured-categories" id="categorias">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossas Categorias</h2>
+                <p class="section-subtitle">Explore nossa ampla variedade de produtos de beleza</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="maquiagem">
+                    <div class="category-image">
+                        <img src="images/maquiagem_4.jpg" alt="Maquiagem">
+                        <div class="category-overlay">
+                            <h3>Maquiagem</h3>
+                            <p>Bases, batons, sombras e muito mais</p>
+                            <button class="btn btn-white">Ver Produtos</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-category="cuidados-pele">
+                    <div class="category-image">
+                        <img src="images/cuidados_pele_5.jpg" alt="Cuidados com a Pele">
+                        <div class="category-overlay">
+                            <h3>Cuidados com a Pele</h3>
+                            <p>Hidratantes, séruns e tratamentos</p>
+                            <button class="btn btn-white">Ver Produtos</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-category="cabelo">
+                    <div class="category-image">
+                        <img src="images/cabelo_2.jpg" alt="Produtos para Cabelo">
+                        <div class="category-overlay">
+                            <h3>Cabelo</h3>
+                            <p>Shampoos, máscaras e tratamentos</p>
+                            <button class="btn btn-white">Ver Produtos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em Destaque -->
+    <section class="featured-products" id="produtos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produtos em Destaque</h2>
+                <p class="section-subtitle">Os mais vendidos e favoritos das nossas clientes</p>
+            </div>
+            
+            <div class="products-filter">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="maquiagem">Maquiagem</button>
+                <button class="filter-btn" data-filter="cuidados-pele">Cuidados com a Pele</button>
+                <button class="filter-btn" data-filter="cabelo">Cabelo</button>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Produtos serão carregados dinamicamente via JavaScript -->
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-outline" id="loadMoreBtn">Carregar Mais Produtos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a Marca -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre o Espaço Sorelle</h2>
+                    <p>Há mais de 10 anos, o Espaço Sorelle tem sido sinônimo de qualidade e inovação no mundo da beleza. Nossa missão é oferecer produtos premium que realçam a beleza natural de cada pessoa.</p>
+                    <p>Trabalhamos apenas com as melhores marcas e ingredientes, garantindo que nossos clientes tenham acesso aos produtos mais eficazes e seguros do mercado.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50k+</h3>
+                            <p>Clientes Satisfeitas</p>
+                        </div>
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Produtos Premium</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Anos de Experiência</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="images/cuidados_pele_6.jpg" alt="Sobre Espaço Sorelle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Fique por Dentro das Novidades</h2>
+                    <p>Receba ofertas exclusivas, dicas de beleza e lançamentos em primeira mão</p>
+                </div>
+                
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" placeholder="Seu melhor e-mail" required>
+                        <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3><i class="fas fa-gem"></i> Espaço Sorelle</h3>
+                        <p>Sua beleza é nossa inspiração. Produtos premium para realçar sua beleza natural.</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categorias</h4>
+                    <ul>
+                        <li><a href="#">Maquiagem</a></li>
+                        <li><a href="#">Cuidados com a Pele</a></li>
+                        <li><a href="#">Produtos para Cabelo</a></li>
+                        <li><a href="#">Perfumes</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Atendimento</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Política de Troca</a></li>
+                        <li><a href="#">Entrega e Frete</a></li>
+                        <li><a href="#">Formas de Pagamento</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                        <p><i class="fas fa-envelope"></i> contato@espacosorelle.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Espaço Sorelle Oficial. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal do Carrinho -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Carrinho de Compras</h3>
+                <button class="modal-close" id="closeCartModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="cart-items" id="cartItems">
+                    <!-- Itens do carrinho serão carregados aqui -->
+                </div>
+                
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <h4>Total: R$ <span id="cartTotal">0,00</span></h4>
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <button class="btn btn-outline" id="clearCartBtn">Limpar Carrinho</button>
+                        <button class="btn btn-primary" id="checkoutBtn">Finalizar Compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal do Produto -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="productModalTitle">Detalhes do Produto</h3>
+                <button class="modal-close" id="closeProductModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="product-details" id="productDetails">
+                    <!-- Detalhes do produto serão carregados aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationText">Produto adicionado ao carrinho!</span>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
